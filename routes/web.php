@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\MeetController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserMeetingsController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -36,3 +38,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::middleware(['auth', 'verified'])->group(static function () {
+    Route::resource('meetings', MeetController::class)->parameter('meetings', 'meet');
+});
+
+Route::get('/users/{user}/meetings', UserMeetingsController::class)->name('users.meetings.show');
