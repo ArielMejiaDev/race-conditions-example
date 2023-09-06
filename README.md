@@ -13,7 +13,7 @@ composer install
 npm install
 ```
 
-## Set the database
+💾 ## Set the database
 
 Race conditions rely on a queue and cache driver that support both a great choice for this example is `database`, 
 so please check both values in the `.env` file and the database name are correct before executing this commands:
@@ -24,7 +24,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-## Run the project
+🏃🏻 ## Run the project
 
 ```
 npm run dev
@@ -46,9 +46,3 @@ password: password
 ```
 
 You can register and login with your own user.
-
-
-
-
-
-
