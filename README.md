@@ -15,6 +15,8 @@ npm install
 
 💾 ## Set the database
 
+Take in mind that queue and cache drivers do not work with SQLite
+
 Race conditions rely on a queue and cache driver that support both a great choice for this example is `database`, 
 so please check both values in the `.env` file and the database name are correct before executing this commands:
 
